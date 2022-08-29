@@ -13,8 +13,7 @@ function ChakraNextLinkIcon({ href, icon, ...props }) {
 }
 
 export default function Home() {
-  return ([
-    <Grid 
+  return ([<Grid 
       placeItems="center"
       p={10}
       /*templateColumns={["fr1", "repeat(fr1, 2)", "repeat(fr1, 4)"]}*/
@@ -48,6 +47,5 @@ export default function Home() {
       <Project gridArea="project3" text="Coming soon" image_url='otro.png' source_link={'/'}/>
       <Project gridArea="project4" text="Coming soon" image_url='otro.png' source_link={'/'}/>
     </Grid>,
-    <SmallWithSocial/>]
-  )
+    <SmallWithSocial/>])
 }
