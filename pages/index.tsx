@@ -1,4 +1,5 @@
 import { Grid, Heading, Text, VStack, Image, HStack, Icon, Divider, Link } from "@chakra-ui/react"
+import * as React from 'react';
 import Project from "@/components/project"
 import SmallWithSocial from "@/components/footer"
 import { FaGithub, FaLinkedinIn} from 'react-icons/fa';
@@ -13,7 +14,9 @@ function ChakraNextLinkIcon({ href, icon, ...props }) {
 }
 
 export default function Home() {
-  return ([<Grid 
+  return (
+    <React.Fragment>
+      <Grid 
       placeItems="center"
       p={10}
       gridTemplateAreas={[
@@ -46,5 +49,7 @@ export default function Home() {
       <Project gridArea="project3" text="Coming soon" image_url='otro.png' source_link={'/'}/>
       <Project gridArea="project4" text="Coming soon" image_url='otro.png' source_link={'/'}/>
     </Grid>,
-    <SmallWithSocial/>])
+    <SmallWithSocial/>
+    </React.Fragment>
+  )  ;
 }
