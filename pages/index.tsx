@@ -1,7 +1,7 @@
 import { Grid, Heading, Text, VStack, Image, HStack, Icon, Divider, Link } from "@chakra-ui/react"
 import Project from "@/components/project"
 import SmallWithSocial from "@/components/footer"
-import { FaGithub, FaLinkedin, FaLinkedinIn} from 'react-icons/fa';
+import { FaGithub, FaLinkedinIn} from 'react-icons/fa';
 import { SiGooglescholar } from "react-icons/si";
 
 function ChakraNextLinkIcon({ href, icon, ...props }) {
@@ -16,7 +16,6 @@ export default function Home() {
   return ([<Grid 
       placeItems="center"
       p={10}
-      /*templateColumns={["fr1", "repeat(fr1, 2)", "repeat(fr1, 4)"]}*/
       gridTemplateAreas={[
         '"photo" "info" "project1" "project2" "project3" "project4"',
         '"photo info" "project1 project2" "project3 project4"',

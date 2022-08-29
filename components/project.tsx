@@ -1,11 +1,11 @@
-import {Box, Center, Heading, Text, VStack, SlideFade, Grid, Button, NextLink} from "@chakra-ui/react";
+import {Box, Center, Heading, VStack, SlideFade, Grid, Button} from "@chakra-ui/react";
 import { useState, useRef, useEffect } from "react";
 import {ArrowForwardIcon } from '@chakra-ui/icons';
 import Link from "next/link";
 
 function ChakraNextLinkButton({ href, ...props }) {
     return (
-      <Link href={href} isExternal>
+      <Link href={href}>
         <Button rightIcon={<ArrowForwardIcon />} color='black' colorScheme='gray' variant='solid'>Source</Button>
       </Link>
     );

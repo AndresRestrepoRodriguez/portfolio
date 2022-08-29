@@ -7,9 +7,7 @@ import {
     useColorModeValue,
     VisuallyHidden,
   } from '@chakra-ui/react';
-import { PhoneIcon, AddIcon, WarningIcon } from '@chakra-ui/icons'
-import { ReactNode } from 'react';
-import { FaGithub, FaLinkedin, FaLinkedinIn} from 'react-icons/fa';
+import { FaGithub, FaLinkedinIn} from 'react-icons/fa';
 import { SiGooglescholar } from "react-icons/si";
 
   const SocialButton = ({
