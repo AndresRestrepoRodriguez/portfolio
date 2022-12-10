@@ -60,24 +60,11 @@ function Project({title, image_url, source_link, labels, ...props}) {
             <HStack>
                 {labels.map((name) => {
                   return (
-                    <Badge display='flex' alignItems='center' borderRadius='full' px='4' colorScheme='teal' textAlign='center' size='md'>
+                    <Badge key={name} display='flex' alignItems='center' borderRadius='full' px='4' colorScheme='teal' textAlign='center' size='md'>
                         {name}
                     </Badge>
                 )})}
             </HStack>
-            
-            
-          {/*<Badge
-            borderRadius='9px'
-            size='md'
-            colorScheme='green'
-            color='green.400'
-            textAlign='center'
-            display='flex'
-            justifyContent='center'
-            alignItems='center'>
-            Design
-                  </Badge>*/}
       </Flex>
       </Center>
       <Link pt={4} href={source_link} isExternal>
