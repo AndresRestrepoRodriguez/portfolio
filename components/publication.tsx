@@ -23,7 +23,7 @@ export default function Publication( {text, labels, url, ...props} ) {
                 <HStack>
                 {property.labels.map((name) => {
                   return (
-                    <Badge key={name} keyborderRadius='full' px='4' colorScheme='teal' fontSize='0.8em'>
+                    <Badge key={name} borderRadius='full' px='4' colorScheme='teal' fontSize='0.8em'>
                         {name}
                     </Badge>
                 )})}
