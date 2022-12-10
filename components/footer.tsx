@@ -43,7 +43,9 @@ import { SiGooglescholar } from "react-icons/si";
       <Box
         bg={useColorModeValue('gray.50', 'gray.900')}
         color={useColorModeValue('gray.700', 'gray.200')}
-        w={["full", "full", "full", "full"]}>
+        w={["100%", "100%", "100%"]}
+        maxW={1000}
+        mx="auto">
         <Container
           as={Stack}
           maxW={'6xl'}

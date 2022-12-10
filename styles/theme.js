@@ -8,14 +8,25 @@ const theme = extendTheme({
           margin: 0,
           padding: 0,
           minHeight: "100vh",
-          color : "#ffffff",
+          color : "#000000",
           background:
-          "linear-gradient(180deg, rgba(41,65,92,1) 20%, rgba(84,123,168,1) 100%);"
+          "#F7FAFC"
         },
         a: {
           color: "violet",
-        },
+        }
       }),
+    },
+    components: {
+      Divider: {
+        defaultProps: { size: "md" },
+        color: '#FFFFFF',
+        sizes: {
+          lg: { borderWidth: "4px" },
+          md: { borderWidth: "3px" },
+          sm: { borderWidth: "1px" },
+        },
+      },
     },
   });
 

@@ -1,50 +1,91 @@
-import {Box, Center, Heading, VStack, SlideFade, Grid, Button} from "@chakra-ui/react";
-import { useState, useRef, useEffect } from "react";
-import {ArrowForwardIcon } from '@chakra-ui/icons';
-import Link from "next/link";
+import React from "react";
+// Chakra imports
+import {
+  Avatar,
+  AvatarGroup,
+  Badge,
+  Flex,
+  Button,
+  Icon,
+  Image,
+  Text,
+  DarkMode,
+  useColorModeValue,
+  HStack,
+  Link,
+  Center
+} from "@chakra-ui/react";
+// Assets
+import { MdPeople } from "react-icons/md";
+import { IoEllipsisHorizontalSharp } from "react-icons/io5";
+import { ExternalLinkIcon } from '@chakra-ui/icons'
+import { ClientRequest } from "http";
 
-function ChakraNextLinkButton({ href, ...props }) {
-    return (
-      <Link href={href}>
-        <Button rightIcon={<ArrowForwardIcon />} color='black' colorScheme='gray' variant='solid'>Source</Button>
+function Project({title, image_url, source_link, labels, ...props}) {
+  let boxBg = useColorModeValue("white !important", "#111c44 !important");
+  let mainText = useColorModeValue("gray.800", "white");
+  let iconBox = useColorModeValue("gray.100", "whiteAlpha.200");
+  let iconColor = useColorModeValue("brand.200", "white");
+  return (
+    <Flex
+      borderRadius='20px'
+      bg={boxBg}
+      p='20px'
+      h='345px'
+      w={{ base: "400px", md: "415px" }}
+      alignItems='center'
+      direction='column'
+      m={10}
+      boxShadow='md'>
+      <Image
+        src={image_url}
+        width = '320px'
+        height = '170px'
+        borderRadius='20px'
+        mb='10px'
+
+      />
+      <Center>
+        <Text
+            fontWeight='600'
+            color={mainText}
+            textAlign='start'
+            fontSize='2xl'
+            w='100%'>
+            {title}
+        </Text>
+      </Center>
+      <Center mt='auto'>
+      <Flex mt='auto' justify='space-between' w='100%' alignItems='center'>
+            <HStack>
+                {labels.map((name) => {
+                  return (
+                    <Badge display='flex' alignItems='center' borderRadius='full' px='4' colorScheme='teal' textAlign='center' size='md'>
+                        {name}
+                    </Badge>
+                )})}
+            </HStack>
+            
+            
+          {/*<Badge
+            borderRadius='9px'
+            size='md'
+            colorScheme='green'
+            color='green.400'
+            textAlign='center'
+            display='flex'
+            justifyContent='center'
+            alignItems='center'>
+            Design
+                  </Badge>*/}
+      </Flex>
+      </Center>
+      <Link pt={4} href={source_link} isExternal>
+        Source<ExternalLinkIcon mx='2px' />
       </Link>
-    );
-  }
-
-export default function Project( {text, image_url, source_link, ...props} ) {
-    const [isOpen, setIsOpen] = useState(false);
-    const ref = useRef(null);
-    const backgr_image = `linear-gradient(rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.001)) , url(${image_url})`
-    useEffect(() => {
-        ref.current.addEventListener('mouseenter', () => setIsOpen(true)),
-        ref.current.addEventListener('mouseleave', () => setIsOpen(false))
-    }, []);
-    
-    return (
-        <Grid
-        {...props}
-        placeItems='center'
-        minH='100px'
-        ref={ref}
-        maxW={['xs', 'xs', 'xs', 'xs']}
-        minW={['xs', 'xs', 'xs', 'xs']}
-        h="75%"
-        _hover={{background: "rgba(255, 255, 255, 0.3)"}}
-        mt={[2, 4, 6, 8]}
-        p={[2, 4, 6, 8]}
-        backgroundImage={backgr_image}
-        backgroundPosition="center"
-        backgroundRepeat="no-repeat"
-        >
-            <Center>
-                <VStack>
-                    <Heading p={5} fontSize={['2xl', '3xl', '3xl', '3xl']} textAlign="center">{text}</Heading>
-                </VStack>
-            </Center>
-            <SlideFade in={isOpen} offsetY='20px'>
-                <ChakraNextLinkButton href={source_link} position="relative"></ChakraNextLinkButton>      
-            </SlideFade>                      
-        </Grid>
-        
-    );
+    </Flex>
+  );
 }
+
+
+export default Project;
