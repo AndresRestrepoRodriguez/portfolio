@@ -1,9 +1,6 @@
-import { Link, Heading, VStack, Center, Stack, Box, Image, Grid, Badge, Divider, StarIcon, Icon, Flex } from "@chakra-ui/react"
+import { Link, Heading, Center, Box, Grid, Divider, Icon, Flex } from "@chakra-ui/react"
 import * as React from 'react';
 import SmallWithSocial from "@/components/footer"
-import { FaGithub, FaLinkedinIn} from 'react-icons/fa';
-import { SiGooglescholar } from "react-icons/si";
-import Project from "@/components/project"
 import TopNavbar from "@/components/top_nav";
 import Publication from "@/components/publication";
 

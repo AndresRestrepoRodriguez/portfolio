@@ -1,15 +1,10 @@
 import React from "react";
 // Chakra imports
 import {
-  Avatar,
-  AvatarGroup,
   Badge,
   Flex,
-  Button,
-  Icon,
   Image,
   Text,
-  DarkMode,
   useColorModeValue,
   HStack,
   Link,

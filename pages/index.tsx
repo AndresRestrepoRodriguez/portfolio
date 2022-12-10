@@ -1,22 +1,9 @@
-import { Grid, Heading, Text, VStack, Image, HStack, Icon, Divider, Link, Box, Flex, IconButton, Center} from "@chakra-ui/react"
+import { Heading, Text, VStack, Image, HStack, Icon, Divider, Link, Box, Flex} from "@chakra-ui/react"
 import { ReactNode } from 'react';
 import {
-  Avatar,
-  Button,
-  Menu,
-  MenuButton,
-  MenuList,
-  MenuItem,
-  MenuDivider,
-  useDisclosure,
-  useColorModeValue,
-  Stack,
-  useColorMode,
-  ButtonGroup,
-  Container,
-  GridItem
-} from '@chakra-ui/react';
-import { HamburgerIcon, CloseIcon, MoonIcon, SunIcon, MdBuild } from '@chakra-ui/icons';
+  Button
+}
+from '@chakra-ui/react';
 import * as React from 'react';
 import SmallWithSocial from "@/components/footer"
 import { FaGithub, FaLinkedinIn} from 'react-icons/fa';
@@ -73,8 +60,6 @@ export default function Home() {
               m={["auto"]}
               w={["80%", "75%", "70%"]}
               maxW="800px"
-              justify="center"
-              direction="column"
               >
               <VStack>
                 <Text noOfLines={2} fontSize={'2xl'}>Machine Learning Engineer - Data Scientist - Researcher</Text>

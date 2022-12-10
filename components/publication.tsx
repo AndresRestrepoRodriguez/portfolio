@@ -35,7 +35,7 @@ export default function Publication( {text, labels, url, ...props} ) {
       
               <Box p='2' alignItems='left'>
                 <Link href={property.url} isExternal alignItems='baseline'>
-                <Heading align='left' size='md' pt="1" noOfLines={3}>{property.title}</Heading>
+                <Heading textAlign='left' size='md' pt="1" noOfLines={3}>{property.title}</Heading>
                 </Link>
               </Box>
       

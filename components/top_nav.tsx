@@ -1,22 +1,12 @@
-import { Grid, Heading, Text, VStack, Image, HStack, Icon, Divider, Link, Box, Flex, IconButton, Center} from "@chakra-ui/react"
+import { Text, HStack, Link, Box, Flex, IconButton} from "@chakra-ui/react"
 import { ReactNode } from 'react';
 import {
-  Avatar,
-  Button,
-  Menu,
-  MenuButton,
-  MenuList,
-  MenuItem,
-  MenuDivider,
   useDisclosure,
   useColorModeValue,
   Stack,
   useColorMode,
-  ButtonGroup,
-  Container,
-  GridItem
 } from '@chakra-ui/react';
-import { HamburgerIcon, CloseIcon, MoonIcon, SunIcon, MdBuild } from '@chakra-ui/icons';
+import { HamburgerIcon, CloseIcon,} from '@chakra-ui/icons';
 
 const Links = [{name:'Home', h_link:'/'}, {name:'Projects', h_link:'/projects'}, {name:'Publications', h_link:'/publications'}];
 
