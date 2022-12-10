@@ -58,7 +58,7 @@ export default function TopNavbar() {
                     spacing={6}
                     display={{ base: 'none', md: 'flex' }}>
                     {Links.map((link) => (
-                        <NavLink name={link.name} link_to={link.h_link} />
+                        <NavLink key={link.name} name={link.name} link_to={link.h_link} />
                     ))}
                     </HStack>
                 </HStack>
@@ -72,7 +72,7 @@ export default function TopNavbar() {
           >
             <Stack as={"nav"} spacing={4}>
                     {Links.map((link) => (
-                        <NavLink name={link.name} link_to={link.h_link} />
+                        <NavLink key={link.name} name={link.name} link_to={link.h_link} />
                     ))}
             </Stack>
           </Box>

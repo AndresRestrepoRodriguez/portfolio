@@ -1,4 +1,4 @@
-import { Link, Heading, VStack, Text, Grid, Box, Image, Card, Badge, Divider, StarIcon, Center, HStack} from "@chakra-ui/react"
+import { Link, Heading, Box, Badge, HStack} from "@chakra-ui/react"
 import * as React from 'react';
 
 
