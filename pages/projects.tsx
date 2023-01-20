@@ -35,7 +35,7 @@ export default function Home() {
             <Divider size='md' borderColor={'#2D3748'} />
             <Divider size='md' borderColor={'#2D3748'} />
             <Flex direction={["column", "column", "row"]} pt={6}>
-            <Project image_url={'/unet_project.png'} title={'Unet Segmentation - MRI'} source_link='https://github.com/AndresRestrepoRodriguez/MRI_Unet_Segmentation' labels={["Deep Learning", "Computer Vision", "Image Segmentation"]}/>
+            <Project image_url={'/unet_project.png'} title={'Unet Segmentation - MRI'} source_link='https://github.com/AndresRestrepoRodriguez/MRI_Unet_Segmentation' labels={["Deep Learning", "Computer Vision", "UNet"]}/>
             <Project image_url={'/dlops.png'} title={'DlOps'} source_link='https://github.com/AndresRestrepoRodriguez/dlops' labels={["Deep Learning", "Python", "MlOps"]}/>
             </Flex>
             <Flex direction={["column", "column", "row"]} pt={6}>
